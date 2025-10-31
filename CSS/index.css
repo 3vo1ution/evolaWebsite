@@ -1,0 +1,396 @@
+/* ===== RESET & BASE STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: #FFFFFF; /* White background */
+    color: #333333; /* Dark grey for text */
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ===== GRID SYSTEM ===== */
+/* Main container that holds both background and content grids */
+.generalContainer {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Background grid for hieroglyph positioning */
+.backgroundGrid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 18px;
+    padding: 0 80px;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Content grid for all page content */
+.contentGrid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 18px;
+    padding: 0 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== GRID SPAN UTILITIES ===== */
+/* Desktop: 12-column grid */
+.colSpan1 { grid-column: span 1; }
+.colSpan2 { grid-column: span 2; }
+.colSpan3 { grid-column: span 3; }
+.colSpan4 { grid-column: span 4; }
+.colSpan5 { grid-column: span 5; }
+.colSpan6 { grid-column: span 6; }
+.colSpan7 { grid-column: span 7; }
+.colSpan8 { grid-column: span 8; }
+.colSpan9 { grid-column: span 9; }
+.colSpan10 { grid-column: span 10; }
+.colSpan11 { grid-column: span 11; }
+.colSpan12 { grid-column: span 12; }
+
+/* ===== HIEROGLYPH STYLING ===== */
+.hieroglyph {
+    position: relative;
+    background-color: rgba(51, 51, 51, 0.1); /* Light grey placeholder */
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    min-height: 80px;
+}
+
+/* Hieroglyph positioning - aligned to grid */
+.glyphOne { grid-column: 2 / span 2; grid-row: 3; }
+.glyphTwo { grid-column: 8 / span 2; grid-row: 5; }
+.glyphThree { grid-column: 4 / span 1; grid-row: 7; }
+.glyphFour { grid-column: 10 / span 2; grid-row: 9; }
+
+/* Interactive hieroglyph states */
+.hieroglyph:hover {
+    background-color: rgba(0, 100, 255, 0.1); /* Light blue on hover */
+    cursor: pointer;
+}
+
+.hieroglyph.active {
+    background-color: rgba(0, 100, 255, 0.3); /* Blue when active */
+}
+
+/* ===== NAVIGATION ===== */
+.navBarSection {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    margin-bottom: 40px;
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.navLeft, .navRight {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navLinks {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.navLinks a {
+    color: #333333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 80px;
+    background: #FFFFFF;
+    box-shadow: 15px 10px 10px rgba(51, 51, 51, 0.1);
+}
+
+.navLinks a:hover {
+    color: #0064FF; /* Blue on hover */
+    box-shadow: 15px 10px 10px rgba(0, 100, 255, 0.2);
+}
+
+.currentPage {
+    color: #0064FF;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 80px;
+    background: #FFFFFF;
+    box-shadow: 15px 10px 10px rgba(0, 100, 255, 0.2);
+}
+
+.logo {
+    color: #333333;
+    font-size: 2rem;
+    letter-spacing: 3px;
+    font-weight: 400;
+}
+
+.hamburgerMenu, .toggle, .icon {
+    background: #FFFFFF;
+    border: none;
+    color: #333333;
+    padding: 12px 20px;
+    border-radius: 80px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    box-shadow: 15px 10px 10px rgba(51, 51, 51, 0.1);
+}
+
+.hamburgerMenu:hover, .toggle:hover, .icon:hover {
+    color: #0064FF;
+    box-shadow: 15px 10px 10px rgba(0, 100, 255, 0.2);
+}
+
+/* ===== LANDING SECTION ===== */
+.landingContent {
+    grid-column: 1 / -1;
+    position: relative;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 60px 0;
+}
+
+.landingVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 80px;
+    box-shadow: 15px 10px 10px rgba(51, 51, 51, 0.1);
+}
+
+.bigHeading {
+    font-size: 225px;
+    color: #333333;
+    position: relative;
+    z-index: 2;
+    font-weight: 500;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+/* ===== CONTENT SECTIONS ===== */
+.sectionOne, .sectionTwo, .sectionThree {
+    grid-column: 1 / -1;
+    margin: 80px 0;
+}
+
+.mainHeading, .title {
+    font-size: 100px;
+    color: #333333;
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.carousel {
+    grid-column: 3 / span 8;
+    margin: 40px 0;
+}
+
+.highlightVideo {
+    width: 100%;
+    border-radius: 80px;
+    box-shadow: 15px 10px 10px rgba(51, 51, 51, 0.1);
+}
+
+.paragraphText {
+    grid-column: 4 / span 6;
+    text-align: center;
+    margin: 30px 0;
+    line-height: 1.8;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+/* Services and Products Layout */
+.serviceItem, .productItem {
+    margin: 40px 0;
+    padding: 30px;
+    background: #FFFFFF;
+    border-radius: 80px;
+    box-shadow: 15px 10px 10px rgba(51, 51, 51, 0.1);
+    transition: all 0.3s ease;
+}
+
+.serviceItem:hover, .productItem:hover {
+    box-shadow: 15px 10px 10px rgba(0, 100, 255, 0.2);
+}
+
+.itemHeading {
+    font-size: 50px;
+    color: #333333;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 0;
+    margin-top: 80px;
+    border-top: 2px solid rgba(51, 51, 51, 0.1);
+}
+
+.footerText {
+    text-align: right;
+    color: #666666;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+
+/* Tablet: 6-column grid */
+@media (max-width: 1024px) {
+    .contentGrid, .backgroundGrid {
+        grid-template-columns: repeat(6, 1fr);
+        padding: 0 40px;
+    }
+    
+    .colSpan1 { grid-column: span 1; }
+    .colSpan2 { grid-column: span 2; }
+    .colSpan3 { grid-column: span 3; }
+    .colSpan4 { grid-column: span 4; }
+    .colSpan5 { grid-column: span 5; }
+    .colSpan6 { grid-column: span 6; }
+    
+    /* Reset full-width spans for tablet */
+    .colSpan7, .colSpan8, .colSpan9, .colSpan10, .colSpan11, .colSpan12 { 
+        grid-column: 1 / -1; 
+    }
+
+    .bigHeading {
+        font-size: 90px;
+    }
+    
+    .mainHeading, .title {
+        font-size: 90px;
+    }
+    
+    .carousel {
+        grid-column: 2 / span 4;
+    }
+    
+    .paragraphText {
+        grid-column: 2 / span 4;
+    }
+    
+    /* Adjust hieroglyph positions for tablet */
+    .glyphOne { grid-column: 1 / span 2; }
+    .glyphTwo { grid-column: 4 / span 2; }
+    .glyphThree { grid-column: 2 / span 1; }
+    .glyphFour { grid-column: 5 / span 2; }
+}
+
+/* Mobile: 4-column grid */
+@media (max-width: 768px) {
+    .contentGrid, .backgroundGrid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+        padding: 0 20px;
+    }
+    
+    .colSpan1 { grid-column: span 1; }
+    .colSpan2 { grid-column: span 2; }
+    .colSpan3 { grid-column: span 3; }
+    .colSpan4 { grid-column: span 4; }
+    
+    /* Reset wider spans for mobile */
+    .colSpan5, .colSpan6, .colSpan7, .colSpan8, 
+    .colSpan9, .colSpan10, .colSpan11, .colSpan12 { 
+        grid-column: 1 / -1; 
+    }
+
+    .navLinks {
+        display: none; /* Will be toggled by JS */
+    }
+    
+    .bigHeading {
+        font-size: 225px; /* Keep large for mobile as specified */
+        letter-spacing: 3px;
+    }
+    
+    .mainHeading, .title {
+        font-size: 100px; /* Keep specified mobile sizes */
+    }
+    
+    .itemHeading {
+        font-size: 50px; /* Keep specified mobile sizes */
+    }
+    
+    .paragraphText {
+        font-size: 25px; /* Keep specified mobile sizes */
+    }
+    
+    .carousel {
+        grid-column: 1 / -1;
+    }
+    
+    .paragraphText {
+        grid-column: 1 / -1;
+    }
+    
+    .footer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .footerText {
+        text-align: center;
+    }
+    
+    /* Adjust shadows for mobile */
+    .navLinks a,
+    .hamburgerMenu, .toggle, .icon,
+    .serviceItem, .productItem,
+    .landingVideo, .highlightVideo {
+        box-shadow: 5px 2.5px 2.5px rgba(51, 51, 51, 0.1);
+        border-radius: 40px; /* Reduced for mobile */
+    }
+    
+    .serviceItem, .productItem {
+        padding: 20px;
+        border-radius: 40px;
+    }
+    
+    /* Adjust hieroglyph positions for mobile */
+    .glyphOne { grid-column: 1 / span 2; grid-row: 2; }
+    .glyphTwo { grid-column: 3 / span 2; grid-row: 4; }
+    .glyphThree { grid-column: 2 / span 1; grid-row: 6; }
+    .glyphFour { grid-column: 1 / span 2; grid-row: 8; }
+}
