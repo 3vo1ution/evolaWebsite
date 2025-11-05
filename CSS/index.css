@@ -63,7 +63,7 @@ body {
 .colSpan11 { grid-column: span 11; }
 .colSpan12 { grid-column: span 12; }
 
-/* ===== HIEROGLYPH STYLING ===== */
+/* HIEROGLYPH STYLING */
 .hieroglyph {
     position: relative;
     background-color: rgba(51, 51, 51, 0.1); /* Light grey placeholder */
@@ -72,11 +72,11 @@ body {
     min-height: 80px;
 }
 
-/* Hieroglyph positioning - aligned to grid */
+/* Hieroglyph positioning - aligned to grid 
 .glyphOne { grid-column: 2 / span 2; grid-row: 3; }
 .glyphTwo { grid-column: 8 / span 2; grid-row: 5; }
 .glyphThree { grid-column: 4 / span 1; grid-row: 7; }
-.glyphFour { grid-column: 10 / span 2; grid-row: 9; }
+.glyphFour { grid-column: 10 / span 2; grid-row: 9; }*/
 
 /* Interactive hieroglyph states */
 .hieroglyph:hover {
@@ -88,7 +88,7 @@ body {
     background-color: rgba(0, 100, 255, 0.3); /* Blue when active */
 }
 
-/* ===== NAVIGATION ===== */
+/*  NAVIGATION  */
 .navBarSection {
     grid-column: 1 / -1;
     display: flex;
@@ -105,11 +105,24 @@ body {
     align-items: center;
 }
 
-.navLeft, .navRight {
+.navLeft {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.navCentre {
     display: flex;
     align-items: center;
     gap: 15px;
 }
+
+.navRight {
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
+}
+
 
 .navLinks {
     display: flex;
@@ -169,13 +182,23 @@ body {
 
 /* ===== LANDING SECTION ===== */
 .landingContent {
-    grid-column: 1 / -1;
-    position: relative;
-    height: 80vh;
+    
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 60px 0;
+    margin:  0;
+    overflow: hidden;
+}
+
+.landing-spacer {
+    grid-column: 1 / -1;
+    height: 100vh;
+    width: 100%;
 }
 
 .landingVideo {
@@ -186,6 +209,7 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 80px;
+    padding: auto;
     box-shadow: 15px 10px 10px rgba(51, 51, 51, 0.1);
 }
 
@@ -200,7 +224,7 @@ body {
 }
 
 /* ===== CONTENT SECTIONS ===== */
-.sectionOne, .sectionTwo, .sectionThree {
+.highlightsSection, .servicesSection, .productsSection {
     grid-column: 1 / -1;
     margin: 80px 0;
 }
@@ -233,8 +257,17 @@ body {
     font-weight: 500;
 }
 
+
+
 /* Services and Products Layout */
+
+.servicesSection {
+    display: flex;
+    flex-direction: column;
+}
+
 .serviceItem, .productItem {
+    display: block; 
     margin: 40px 0;
     padding: 30px;
     background: #FFFFFF;
