@@ -1,4 +1,4 @@
-/* ===== RESET & BASE STYLES ===== */
+
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +13,7 @@ body {
     overflow-x: hidden;
 }
 
-/* ===== GRID SYSTEM ===== */
+/* GRID SYSTEM */
 /* Main container that holds both background and content grids */
 .generalContainer {
     position: relative;
@@ -48,7 +48,7 @@ body {
     z-index: 1;
 }
 
-/* ===== GRID SPAN UTILITIES ===== */
+/*GRID SPAN UTILITIES */
 /* Desktop: 12-column grid */
 .colSpan1 { grid-column: span 1; }
 .colSpan2 { grid-column: span 2; }
@@ -180,7 +180,7 @@ body {
     box-shadow: 15px 10px 10px rgba(0, 100, 255, 0.2);
 }
 
-/* ===== LANDING SECTION ===== */
+/* LANDING SECTION */
 .landingContent {
     
     position: fixed;
@@ -213,6 +213,16 @@ body {
     box-shadow: 15px 10px 10px rgba(51, 51, 51, 0.1);
 }
 
+.landingContent.landing-stopped {
+  position: flex !important;
+  top: var(--landing-stop-top, 0) !important;
+  left: 0 !important;
+  width: 100vw !important;
+  /* let height be content-determined so it will scroll out */
+  height: auto !important;
+  pointer-events: none;       /* allow clicks to pass through */
+}
+
 .bigHeading {
     font-size: 225px;
     color: #333333;
@@ -223,7 +233,7 @@ body {
     text-align: center;
 }
 
-/* ===== CONTENT SECTIONS ===== */
+/*  CONTENT SECTIONS  */
 .highlightsSection, .servicesSection, .productsSection {
     grid-column: 1 / -1;
     margin: 80px 0;
@@ -261,24 +271,77 @@ body {
 
 /* Services and Products Layout */
 
-.servicesSection {
-    display: flex;
-    flex-direction: column;
+
+
+.servicesSection,
+.productsSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-rows: auto 1fr;
+  flex-direction: row;   
+  width: 100%;
 }
 
-.serviceItem, .productItem {
-    display: block; 
-    margin: 40px 0;
-    padding: 30px;
-    background: #FFFFFF;
-    border-radius: 80px;
-    box-shadow: 15px 10px 10px rgba(51, 51, 51, 0.1);
-    transition: all 0.3s ease;
+
+.servicesTitle{
+  grid-column: 1 / -1;
+  grid-row: 1;
+  position: relative;
+  text-align: center;
+  margin: 0 auto 12px;
+  left: 0;
+  position: relative;
 }
 
-.serviceItem:hover, .productItem:hover {
+.servicesList {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  justify-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.servicesListItem {
+  grid-row: 2;
+  width: 100%;
+  border-color: #646464;
+  border-width: 0.5px;
+  border-style: solid;
+  background: #6464640d;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); /* Safari support */
+  padding: 20px;
+  margin: 40px 0;
+  border-radius: 20px;
+  box-shadow: 15px 10px 10px rgba(51, 51, 51, 0.1);
+  transition: all 0.3s ease;
+}
+
+.servicesListItem:hover, .productItem:hover {
     box-shadow: 15px 10px 10px rgba(0, 100, 255, 0.2);
+    border-color: #2a5cf7;
+    border-width: 0.5px;
+    border-style: solid;
 }
+
+
+.serviceImage,
+.productImage,
+img {
+display: block;     
+max-width: 100%;
+inset: 0;
+aspect-ratio: 1/ 1;   /* keeps a consistent box for every image */
+object-fit: cover;
+object-position: center;
+opacity: 0.9;
+}
+
+
 
 .itemHeading {
     font-size: 50px;
@@ -287,7 +350,7 @@ body {
     font-weight: 600;
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER  */
 .footer {
     grid-column: 1 / -1;
     display: flex;
@@ -392,6 +455,12 @@ body {
     .carousel {
         grid-column: 1 / -1;
     }
+
+    .highlightVideo {
+    width: 100%;
+    border-radius: 80px;
+    box-shadow: 15px 10px 10px rgba(51, 51, 51, 0.1);
+     }
     
     .paragraphText {
         grid-column: 1 / -1;

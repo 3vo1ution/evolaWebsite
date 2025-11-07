@@ -4,10 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/main.css">
 </head>
 <body>
 
-    <h1 class="bigHeading">Projects</h1>
+      <!-- Fix headings, refine overall layout, attend to css -->
+    <!-- Grids and Containers -->
+    <div class="generalContainer">
+
+        <!-- Background Grid with Hieroglyphs -->
+        <div class="backgroundGrid">
+            <div class="hieroglyph glyphOne" data-glyph="1"></div>
+            <div class="hieroglyph glyphTwo" data-glyph="2"></div>
+            <div class="hieroglyph glyphThree" data-glyph="3"></div>
+            <div class="hieroglyph glyphFour" data-glyph="4"></div>
+        </div>
+
+        <!-- contentGrid -->
+        <div class="contentGrid">
+        
+            <!-- Header -->
+            <header class="navBarSection">
+                <nav class="navBar">
+                    <div class="navLeft">
+                        <button class="hamburgerMenu"> &#9776; </button>
+                        <button class="toggle">Toggle</button>
+                        <ul class="navLinks">
+                            <li class="navLink"><a class="u-url" href="../index.html">Homepage</a></li>
+                            <li class="currentPage">Projects</li>
+                            <li class="navLink"><a class="u-url" href="../About/about.html">About</a></li>
+                            <li class="navLink"><a class="u-url" href="../Contact/contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="navCentre">
+                        <h1 class="logo">EVOLA</h1>
+                    </div>
+
+                    <div class="navRight">
+                        <button class="icon">Search</button>
+                        <button class="icon">Cart</button>
+                        <button class="icon">+</button>
+                    </div>
+                </nav>
+            </header>
+
+            <!-- landingSection -->
+             
+            <div class="landingContent">
+
+                <img src="../Media/Projects/SAGGIN.jpg"  class="landingImage">
+                <h1 class="bigHeading">PROJECTS</h1>
+            </div>
+
+            <!-- Spacer to push content down -->
+              <div class="landing-spacer"></div>
 
     
 
@@ -79,5 +133,7 @@
    
 </section>
 
+    </div><!-- contentGrid -->
+    </div><!-- generalContainer -->
 </body>
 </html>
