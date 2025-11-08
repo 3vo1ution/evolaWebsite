@@ -168,7 +168,7 @@ headingTl.to(bigHeading, {
     window.addEventListener('resize', () => {
       clearTimeout(resizeTO);
       resizeTO = setTimeout(() => {
-        // restore first (so getBoundingClientRect is correct), then rebuild
+        
         if (bigHeading) {
           bigHeading.style.position = "";
           bigHeading.style.top = "";
@@ -194,11 +194,6 @@ headingTl.to(bigHeading, {
     console.log('❌ Heading animation skipped - missing elements or GSAP');
   }
 
-
-  // ... rest of your contact form code
-
-    
-    
 
 
     // contact form and all that 

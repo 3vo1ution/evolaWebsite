@@ -7,11 +7,11 @@
 
 body {
     font-family: 'Playfair Display', serif;
-    background-color: #FFFFFF; /* White background */
     color: #333333; /* Dark grey for text */
     line-height: 1.6;
     overflow-x: hidden;
 }
+
 
 /* GRID SYSTEM */
 /* Main container that holds both background and content grids */
@@ -66,7 +66,6 @@ body {
 /* HIEROGLYPH STYLING */
 .hieroglyph {
     position: relative;
-    background-color: rgba(51, 51, 51, 0.1); /* Light grey placeholder */
     border-radius: 8px;
     transition: all 0.3s ease;
     min-height: 80px;
@@ -80,14 +79,13 @@ body {
 
 /* Interactive hieroglyph states */
 .hieroglyph:hover {
-    background-color: rgba(0, 100, 255, 0.1); /* Light blue on hover */
     cursor: pointer;
 }
 
 
 
 .bigHeading {
-    color: #333333;
+    color: #646464;
     font-weight: 255px;
     text-align: center;
     grid-column: 1 / -1;
@@ -96,7 +94,6 @@ body {
 }
 
 .hieroglyph.active {
-    background-color: rgba(0, 100, 255, 0.3); /* Blue when active */
 }
 
 
@@ -166,7 +163,7 @@ body {
 .highlightVideo {
     width: 100%;
     border-radius: 80px;
-    box-shadow: 15px 10px 10px rgba(51, 51, 51, 0.1);
+    box-shadow: 20px 15px 15px rgba(51, 51, 51, 0.1);
 }
 
 .paragraphText {
@@ -175,8 +172,16 @@ body {
     margin: 30px 0;
     line-height: 1.8;
     font-size: 25px;
-    font-weight: 500;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px); /* Safari support */
+    border-radius: 20px;
+    box-shadow: 15px 10px 10px rgba(51, 51, 51, 0.283);
+    border-color: #2a5cf7;
+     border-width: 0.5px;
+     border-style: solid;
+     
 }
+
 
 
 
@@ -197,11 +202,11 @@ body {
 .servicesTitle{
   grid-column: 1 / -1;
   grid-row: 1;
+  font-size: 90px;
   position: relative;
   text-align: center;
   margin: 0 auto 12px;
   left: 0;
-  position: relative;
 }
 
 .servicesList {
@@ -223,8 +228,8 @@ body {
   border-width: 0.5px;
   border-style: solid;
   background: #6464640d;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px); /* Safari support */
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px); /* Safari support */
   padding: 20px;
   margin: 40px 0;
   border-radius: 20px;
@@ -237,6 +242,12 @@ body {
     border-color: #2a5cf7;
     border-width: 0.5px;
     border-style: solid;
+}
+
+.serviceItemHeading {
+    font-size: 30px;
+    object-fit: contain;
+
 }
 
 
@@ -252,6 +263,17 @@ object-position: center;
 opacity: 0.9;
 }
 
+.videoTitle {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  font-size: 30px;
+  position: flex;
+  text-align: center;
+  padding: 60px;
+  margin: 0 auto 12px;
+  left: 0;
+
+}
 
 
 .itemHeading {
@@ -279,7 +301,7 @@ opacity: 0.9;
     font-weight: 500;
 }
 
-/* ===== RESPONSIVE ADJUSTMENTS ===== */
+/* RESPONSIVE ADJUSTMENTS  */
 
 /* Tablet: 6-column grid */
 @media (max-width: 1024px) {
@@ -303,6 +325,34 @@ opacity: 0.9;
     .bigHeading {
         font-size: 90px;
     }
+
+    .servicesList {
+  display: grid;
+  grid-row: 2;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  width: 100vw;
+  height: 100vh;
+  gap: 24px;
+  justify-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.servicesListItem {
+  grid-row: 2;
+  border-color: #646464;
+  border-width: 0.5px;
+  border-style: solid;
+  background: #6464640d;
+  backdrop-filter: blur(1.8px);
+  -webkit-backdrop-filter: blur(1.8px); /* Safari support */
+  padding: 20px;
+  margin: 40px 0;
+  border-radius: 20px;
+  box-shadow: 15px 10px 10px rgba(51, 51, 51, 0.1);
+  transition: all 0.3s ease;
+}
     
     .mainHeading, .title {
         font-size: 90px;
@@ -316,12 +366,7 @@ opacity: 0.9;
         grid-column: 2 / span 4;
     }
     
-    /* Adjust hieroglyph positions for tablet */
-    .glyphOne { grid-column: 1 / span 2; }
-    .glyphTwo { grid-column: 4 / span 2; }
-    .glyphThree { grid-column: 2 / span 1; }
-    .glyphFour { grid-column: 5 / span 2; }
-}
+
 
 /* Mobile: 4-column grid */
 @media (max-width: 768px) {

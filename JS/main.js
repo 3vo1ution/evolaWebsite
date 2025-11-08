@@ -26,12 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const isOpen = navLinks.classList.contains('open');
     
     if (isOpen) {
-      // Close menu
+   
       navLinks.classList.remove('open');
       hamburger.setAttribute('aria-expanded', 'false');
       document.documentElement.style.overflow = '';
     } else {
-      // Open menu
+ 
       navLinks.classList.add('open');
       hamburger.setAttribute('aria-expanded', 'true');
       document.documentElement.style.overflow = 'hidden';
