@@ -360,7 +360,7 @@ opacity: 0.9;
         grid-column: 2 / span 4;
     }
     
-
+}
 
 /* Mobile: 4-column grid */
 @media (max-width: 768px) {
@@ -446,3 +446,284 @@ opacity: 0.9;
     .glyphThree { grid-column: 2 / span 1; grid-row: 6; }
     .glyphFour { grid-column: 1 / span 2; grid-row: 8; }
 }
+
+
+/* ===== TABLET STYLES (768px - 1024px) ===== */
+@media screen and (max-width: 1024px) {
+    /* Grid adjustments */
+    .backgroundGrid,
+    .contentGrid {
+        padding: 0 40px;
+        gap: 16px;
+    }
+    
+    /* Typography scaling */
+    .bigHeading {
+        font-size: 180px;
+        padding-top: 40px;
+    }
+    
+    .mainHeading, .title {
+        font-size: 80px;
+        margin-bottom: 30px;
+    }
+    
+    .servicesTitle {
+        font-size: 70px;
+    }
+    
+    .itemHeading {
+        font-size: 40px;
+    }
+    
+    .serviceItemHeading {
+        font-size: 25px;
+    }
+    
+    .paragraphText {
+        font-size: 22px;
+        grid-column: 3 / span 8;
+        padding: 25px;
+    }
+    
+    /* Layout adjustments */
+    .carousel {
+        grid-column: 2 / span 10;
+        margin: 30px 0;
+    }
+    
+    .highlightVideo {
+        border-radius: 60px;
+    }
+    
+    .servicesList {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 20px;
+    }
+    
+    .servicesListItem {
+        margin: 30px 0;
+        padding: 18px;
+    }
+    
+    .videoTitle {
+        font-size: 26px;
+        padding: 40px;
+    }
+    
+    /* Section spacing */
+    .highlightsSection, 
+    .servicesSection, 
+    .productsSection {
+        margin: 60px 0;
+    }
+    
+    .footer {
+        padding: 50px 0;
+        margin-top: 60px;
+    }
+}
+
+/* ===== MOBILE STYLES (max-width: 767px) ===== */
+@media screen and (max-width: 767px) {
+    /* Grid adjustments */
+    .backgroundGrid,
+    .contentGrid {
+        padding: 0 20px;
+        gap: 12px;
+    }
+    
+    /* Typography scaling */
+    .bigHeading {
+        font-size: 120px;
+        padding-top: 30px;
+        letter-spacing: 2px;
+        line-height: 1.1;
+    }
+    
+    .mainHeading, .title {
+        font-size: 60px;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+    
+    .servicesTitle {
+        font-size: 50px;
+    }
+    
+    .itemHeading {
+        font-size: 32px;
+        text-align: center;
+    }
+    
+    .serviceItemHeading {
+        font-size: 22px;
+        text-align: center;
+    }
+    
+    .paragraphText {
+        font-size: 18px;
+        grid-column: 1 / -1;
+        padding: 20px;
+        margin: 20px 0;
+        line-height: 1.6;
+    }
+    
+    /* Layout adjustments */
+    .carousel {
+        grid-column: 1 / -1;
+        margin: 25px 0;
+    }
+    
+    .highlightVideo,
+    .landingVideo {
+        border-radius: 40px;
+    }
+    
+    /* Services and products layout */
+    .servicesList {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .servicesListItem {
+        margin: 20px 0;
+        padding: 16px;
+        border-radius: 25px;
+    }
+    
+    .videoTitle {
+        font-size: 22px;
+        padding: 30px 20px;
+    }
+    
+    /* Image and video adjustments */
+    .serviceImage,
+    .productImage,
+    img {
+        aspect-ratio: 16/9; /* More mobile-friendly aspect ratio */
+    }
+    
+    /* Section spacing */
+    .highlightsSection, 
+    .servicesSection, 
+    .productsSection {
+        margin: 40px 0;
+    }
+    
+    .landing-spacer {
+        height: 80vh;
+    }
+    
+    .footer {
+        padding: 40px 0;
+        margin-top: 40px;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .footerText {
+        text-align: center;
+        font-size: 16px;
+    }
+    
+    /* Reduce shadow intensities for mobile */
+    .landingVideo,
+    .highlightVideo,
+    .servicesListItem,
+    .paragraphText {
+        box-shadow: 8px 5px 5px rgba(51, 51, 51, 0.1);
+    }
+}
+
+/* ===== SMALL MOBILE STYLES (max-width: 480px) ===== */
+@media screen and (max-width: 480px) {
+    .backgroundGrid,
+    .contentGrid {
+        padding: 0 15px;
+        gap: 10px;
+    }
+    
+    .bigHeading {
+        font-size: 80px;
+        padding-top: 20px;
+    }
+    
+    .mainHeading, .title {
+        font-size: 45px;
+    }
+    
+    .servicesTitle {
+        font-size: 40px;
+    }
+    
+    .itemHeading {
+        font-size: 28px;
+    }
+    
+    .serviceItemHeading {
+        font-size: 20px;
+    }
+    
+    .paragraphText {
+        font-size: 16px;
+        padding: 15px;
+    }
+    
+    .highlightVideo,
+    .landingVideo {
+        border-radius: 30px;
+    }
+    
+    .servicesListItem {
+        padding: 12px;
+        border-radius: 20px;
+    }
+    
+    .videoTitle {
+        font-size: 20px;
+        padding: 25px 15px;
+    }
+    
+    .landing-spacer {
+        height: 70vh;
+    }
+}
+
+/* ===== TABLET LANDSCAPE ORIENTATION ===== */
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+    .bigHeading {
+        font-size: 150px;
+    }
+    
+    .landing-spacer {
+        height: 100vh;
+    }
+    
+    .servicesList {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+/* ===== MOBILE LANDSCAPE ORIENTATION ===== */
+@media screen and (max-width: 767px) and (orientation: landscape) {
+    .bigHeading {
+        font-size: 100px;
+    }
+    
+    .landing-spacer {
+        height: 90vh;
+    }
+    
+    .servicesList {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    
+    .servicesListItem {
+        margin: 10px 0;
+        padding: 12px;
+    }
+}
+
