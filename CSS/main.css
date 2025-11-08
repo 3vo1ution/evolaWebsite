@@ -290,5 +290,194 @@ body {
 
 
 
+/* ===== TABLET STYLES (768px - 1024px) ===== */
+@media screen and (max-width: 1024px) {
+    /* Adjust grid padding and gaps */
+    .backgroundGrid,
+    .contentGrid {
+        padding: 0 40px;
+        gap: 16px;
+    }
+    
+    /* Navigation adjustments */
+    .navBarSection {
+        padding: 15px 0;
+        margin-bottom: 30px;
+    }
+    
+    .logo {
+        font-size: 1.75rem;
+        letter-spacing: 2px;
+    }
+    
+    .hamburgerMenu, .toggle, .icon {
+        padding: 10px 18px;
+        font-size: 0.9rem;
+    }
+    
+    /* Landing section adjustments */
+    .bigHeading {
+        font-size: 180px;
+        letter-spacing: 4px;
+    }
+    
+    .landing-spacer {
+        height: 80vh;
+    }
+    
+    /* Footer adjustments */
+    .footer {
+        padding: 50px 0;
+        margin-top: 60px;
+    }
+    
+    .footerText {
+        font-size: 16px;
+    }
+}
 
+/* ===== MOBILE STYLES (max-width: 767px) ===== */
+@media screen and (max-width: 767px) {
+    /* Further reduce grid padding and gaps */
+    .backgroundGrid,
+    .contentGrid {
+        padding: 0 20px;
+        gap: 12px;
+    }
+    
+    /* Mobile navigation */
+    .navBarSection {
+        padding: 12px 0;
+        margin-bottom: 20px;
+    }
+    
+    .navLinks {
+        width: 280px;
+        padding: 100px 30px 30px 30px;
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
+    
+    .hamburgerMenu, .toggle, .icon {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+    
+    .navLinks a {
+        padding: 6px 14px;
+        font-size: 0.9rem;
+    }
+    
+    /* Mobile landing section */
+    .bigHeading {
+        font-size: 120px;
+        letter-spacing: 3px;
+        line-height: 1.2;
+    }
+    
+    .landing-spacer {
+        height: 70vh;
+    }
+    
+    /* Mobile grid spans - stack most content */
+    .colSpan1,
+    .colSpan2,
+    .colSpan3,
+    .colSpan4,
+    .colSpan5,
+    .colSpan6,
+    .colSpan7,
+    .colSpan8,
+    .colSpan9,
+    .colSpan10,
+    .colSpan11,
+    .colSpan12 {
+        grid-column: 1 / -1 !important;
+    }
+    
+    /* Mobile footer */
+    .footer {
+        padding: 40px 0;
+        margin-top: 40px;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .footerText {
+        text-align: center;
+        font-size: 14px;
+    }
+}
 
+/* ===== SMALL MOBILE STYLES (max-width: 480px) ===== */
+@media screen and (max-width: 480px) {
+    .backgroundGrid,
+    .contentGrid {
+        padding: 0 15px;
+        gap: 10px;
+        overflow: hidden;
+    }
+
+    .bigHeading {
+        font-size: 80px;
+        letter-spacing: 2px;
+    }
+    
+    .navLinks {
+        width: 100%;
+        padding: 40px 20px 20px 20px;
+    }
+    
+    .landing-spacer {
+        height: 60vh;
+    }
+    
+    .logo {
+        font-size: 1.3rem;
+    }
+    
+    .hamburgerMenu, .toggle, .icon {
+        padding: 6px 14px;
+        font-size: 0.8rem;
+    }
+}
+
+/* ===== TABLET LANDSCAPE ORIENTATION ===== */
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+    .landing-spacer {
+        height: 100vh;
+    }
+    
+    .bigHeading {
+        font-size: 150px;
+    }
+    
+    .navLinks {
+        padding-top: 80px;
+    }
+}
+
+/* ===== MOBILE LANDSCAPE ORIENTATION ===== */
+@media screen and (max-width: 767px) and (orientation: landscape) {
+    .landing-spacer {
+        height: 90vh;
+    }
+    
+    .bigHeading {
+        font-size: 100px;
+    }
+    
+    .navLinks {
+        padding-top: 70px;
+        gap: 15px;
+    }
+    
+    .navLinks a {
+        padding: 4px 12px;
+        font-size: 0.8rem;
+    }
+}
