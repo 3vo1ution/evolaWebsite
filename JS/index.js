@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       gsap.to(landingContent, {
         opacity: 0,
-        duration: 0.,
+        duration: 0.5,
         ease: "sine.inOut",
         overwrite: true
       });

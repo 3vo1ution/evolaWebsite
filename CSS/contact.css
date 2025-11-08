@@ -1,5 +1,5 @@
 .contactUsSection, .contactDetails {
-    grid-column: 1 / -1; /* Span all 12 columns */
-    display: block; /* Override any grid behavior */
+    grid-column: 1 / -1; 
+    display: block; 
     width: 100%;
 }

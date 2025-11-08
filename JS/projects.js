@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!stopped && top <= triggerOffset) {
       gsap.to(landingContent, {
         opacity: 0,
-        duration: 0.5, // Fixed: was 0. (invalid)
+        duration: 0.5, 
         ease: "sine.inOut",
         overwrite: true
       });

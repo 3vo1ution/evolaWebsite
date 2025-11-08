@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/about.css">
 </head>
 <body>
 
@@ -63,15 +64,17 @@
             <!-- Spacer to push content down -->
               <div class="landing-spacer"></div>
 
-    
-    <h1 class="bigHeading">About</h1>
 
     <section class="ourStorySection">
+
+    <h1 class="bigHeading">About</h1>
+
+    
     <h2 class="mainHeading">Our Story</h2>
     <p class="paragraphText">The full evola lore and what were all about</p>
     </section>
 
-    <section class="ourTeam">
+    <section class="ourTeamSection">
     <h2 class="mainHeading">Our Team</h2>
     <h3 class="title">Member 1</h3>
     <p class="paragraphText">Some lore about the member</p>
@@ -88,9 +91,47 @@
 
     </section>
 
-    <section class="ourClientSection">
-    <h2 class="mainHeading">Our Clients</h2>
+    <section class="drawSection">
+    <h2 class="mainHeading">You could be here too</h2>
+    <p class = "paragraphText">Draw in the box below to Practice</p>
+
+    <canvas id="myCanvas" width="800" height="600"></canvas>
+
     </section>
+
+    <!--ART INSO-->
+     <section class="artSection">
+    <h2 class="mainHeading">Art Inspiration</h2>
+    <p class="paragraphText">Explore 30,000+ artworks from the Cleveland Museum of Art. Get inspired by masterpieces!</p>
+    
+    <div class="apiControls">
+        <button id="loadArtBtn" class="artButton">🖼️ Random Masterpiece</button>
+        <input type="text" id="artSearch" class="artSearch" placeholder="Search artworks...">
+        <button id="searchArtBtn" class="artButton">🔍 Search Art</button>
+    </div>
+    
+    <!-- Loading State -->
+    <div id="artLoading" class="loadingState">
+        <div class="loadingSpinner"></div>
+        <p>Loading artwork from museum collection...</p>
+    </div>
+    
+    <!-- Error State -->
+    <div id="artError" class="errorState">
+        <p>Failed to load artwork. Please try again.</p>
+    </div>
+    
+    <!-- Success State -->
+    <div id="artResult" class="artResult">
+        <div class="artInfo">
+            <h3 id="artTitle" class="artTitle"></h3>
+        </div>
+        <div id="artContainer" class="artContainer">
+            <!-- Artwork will be inserted here -->
+        </div>
+    </div>
+</section>
+
 
       <script src="../JS/main.js"></script> 
         <script src="../JS/about.js"></script> 

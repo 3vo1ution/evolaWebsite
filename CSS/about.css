@@ -1,0 +1,274 @@
+.ourStorySection, .contactDetails, .ourTeamSection, .drawSection {
+    grid-column: 1 / -1;
+    display: block; 
+    width: 100%;
+}
+
+#myCanvas {
+  border-radius: 20px;
+  box-shadow: 15px 10px 10px rgba(51,51,51,0.1);
+  border-color: #646464;
+  border-width: 0.5px;
+  border-style: solid;
+  object-position: center;
+}
+
+/* Giphy API Styles */
+.giphySection {
+    grid-column: 1 / -1;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.apiControls {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.giphyButton {
+    background: #FFFFFF;
+    border: none;
+    color: #333333;
+    padding: 12px 24px;
+    border-radius: 80px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    box-shadow: 15px 10px 10px rgba(51, 51, 51, 0.1);
+}
+
+.giphyButton:hover {
+    color: #0064FF;
+    box-shadow: 15px 10px 10px rgba(0, 100, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.giphySearch {
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 80px;
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    min-width: 250px;
+}
+
+/* Loading State */
+.loadingState {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin: 30px 0;
+    padding: 40px;
+}
+
+.loadingState.active {
+    display: flex;
+}
+
+.loadingSpinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #0064FF;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Error State */
+.errorState {
+    display: none;
+    background: #ffebee;
+    color: #c62828;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 30px 0;
+    border: 1px solid #ffcdd2;
+}
+
+.errorState.active {
+    display: block;
+}
+
+
+/* Art API Styles */
+.artSection {
+    grid-column: 1 / -1;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.apiControls {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.artButton {
+    background: #FFFFFF;
+    border: none;
+    color: #333333;
+    padding: 12px 24px;
+    border-radius: 80px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    box-shadow: 15px 10px 10px rgba(51, 51, 51, 0.1);
+}
+
+.artButton:hover {
+    color: #0064FF;
+    box-shadow: 15px 10px 10px rgba(0, 100, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.artSearch {
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 80px;
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    min-width: 250px;
+}
+
+/* Loading State */
+.loadingState {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin: 30px 0;
+    padding: 40px;
+}
+
+.loadingState.active {
+    display: flex;
+}
+
+.loadingSpinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #0064FF;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Error State */
+.errorState {
+    display: none;
+    background: #ffebee;
+    color: #c62828;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 30px 0;
+    border: 1px solid #ffcdd2;
+}
+
+.errorState.active {
+    display: block;
+}
+
+/* Art Result */
+.artResult {
+    display: none;
+    margin: 30px 0;
+}
+
+.artResult.active {
+    display: block;
+}
+
+.artInfo {
+    margin-bottom: 20px;
+}
+
+.artTitle {
+    font-size: 1.5rem;
+    color: #333333;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.artContainer {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Artwork Display Styles */
+.artworkWrapper {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 15px 10px 10px rgba(51, 51, 51, 0.1);
+    background: white;
+}
+
+.artworkImage {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: contain;
+    background: #f8f8f8;
+    display: block;
+}
+
+.noImagePlaceholder {
+    padding: 60px 20px;
+    text-align: center;
+    background: #f8f8f8;
+    color: #666;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.placeholderIcon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.artworkInfo {
+    padding: 25px;
+    text-align: left;
+    background: white;
+}
+
+.artworkInfo p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 8px;
+}
+
+.artworkInfo p:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.artAttribution {
+    margin-top: 15px;
+    color: #666;
+    font-size: 0.9rem;
+    font-style: italic;
+}
