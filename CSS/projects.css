@@ -1,33 +1,64 @@
 
-/* Projects grid (matches recentProjectGrid style) */
+
+.recentProjectSection, .projectsDisplay {
+    grid-column: 1 / -1; /* Span all 12 columns */
+    display: block; /* Override any grid behavior */
+    width: 100%;
+}
+
+
 .projectsSection {
   grid-column: 1 / -1;
   padding: 60px 20px;          /* spacing around the section */
 }
+
 
 .projectsSection .mainHeading {
   font-size: 2.4rem;
   margin-bottom: 24px;
 }
 
-/* Grid: 3 columns on large screens, 2 on medium, 1 on small */
 .projectsGrid {
-  display: grid;
+  display: block;
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
   align-items: centre;
 }
 
-.projectGridItem {
-  border-radius: 8px;
-  padding: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+.recentProjectGridList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* exactly 2 columns */
+  gap: 24px;          
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  align-items: start;
 }
 
-.projectVideo {
-    display: block;
-    grid-column: 1 / -1;
+.recentProjectGridListItem {
+  grid-row: auto;    
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  border: 0.5px solid #646464;
+  background: rgba(100,100,100,0.05);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 20px;
+  box-shadow: 15px 10px 10px rgba(51,51,51,0.1);
+  transition: all 0.3s ease;
+  margin: 0;  
+
 }
+
+ .recentProjectGridListItem:first-child {
+     grid-column: 1 / -1; 
+    } 
+
+  .recentProjectGridListItem:nth-child(4) {
+     grid-column: 1 / -1;
+    }
+
 
 .recentProjectImage{
   display: block;     
@@ -38,15 +69,45 @@
   opacity: 0.9;
 }
 
-.projectsDisplay{
+.recentProjectVideo {
+  display: block;     
+  max-width: 100%;
+  inset: 0;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.9;
+}
 
+.projectGridList{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  grid-template-rows: auto 1fr;
-  flex-direction: row;   
-  width: 100%;
-  padding: 20%;
+  grid-template-columns: repeat(2, 1fr); /* exactly 2 columns */
+  gap: 24px;          
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  align-items: start;
+}
 
+.projectGridItem {
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+
+.projectGridListItem {
+  grid-row: auto;    
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  border: 0.5px solid #646464;
+  background: rgba(100,100,100,0.05);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 20px;
+  box-shadow: 15px 10px 10px rgba(51,51,51,0.1);
+  transition: all 0.3s ease;
+  margin: 0;   
 }
 
 
@@ -61,6 +122,11 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+
+.recentProjectGridList {
+    grid-template-columns: 1fr;
+  }
+
   .double-width {
     grid-column: 1 / -1; 
   }

@@ -39,6 +39,8 @@ body {
 .contentGrid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto 1fr;
+    flex-direction: row;
     gap: 18px;
     padding: 0 80px;
     max-width: 100%;
