@@ -42,7 +42,6 @@
                     </div>
 
                     <div class="navCentre">
-                        <h1 class="logo">EV0LA</h1>
                     </div>
 
                     <div class="navRight">
@@ -54,11 +53,11 @@
             </header>
 
             <!-- landingSection -->
-             
+              <h1 class="bigHeading">HIT US UP</h1>
             <div class="landingContent">
 
                 <img src="../Media/Us/SESBJustina.jpg"  class="landingImage">
-                <h1 class="bigHeading">HIT US UP</h1>
+               
             </div>
 
             <!-- Spacer to push content down -->
@@ -71,14 +70,95 @@
     <p class="paragraphText">Some words convincing people to hit us up.</p>
      </section>
 
-    <section class="contactDetails">
-    <h3 class="title">Contact Details</h3>
-    </section>
+   <section class="contactDetails">
+  <h2 class="mainHeading">Contact details</h2>
+
+  <div class="contactWrapper">
+    <!-- left: info card (wireframe style) -->
+    <aside class="contactInfoCard">
+      <p class="paragraphText">If you'd like to work together, ask about workshops, or request a commission, fill the form and we'll respond as soon we are able.</p>
+      <ul class="contactMeta">
+        <li>Email: <a href="mailto:official.evola@gmail.com">official.evola@gmail.com</a></li>
+        <li>Phone: (081) 240 5935</li>
+      </ul>
+    </aside>
+
+    <!-- right: interactive contact form -->
+    <form class="contactForm" id="contactForm" novalidate aria-describedby="formStatus">
+      <div class="formGrid">
+        <label class="formLabel">
+          Full name *
+          <input type="text" name="fullName" id="fullName" class="inputField" required aria-required="true" />
+          <span class="errorMsg" id="fullNameError" aria-live="polite"></span>
+        </label>
+
+        <label class="formLabel">
+          Company name
+          <input type="text" name="company" id="company" class="inputField" />
+          <span class="errorMsg" id="companyError" aria-live="polite"></span>
+        </label>
+
+        <label class="formLabel">
+          Email address *
+          <input type="email" name="email" id="email" class="inputField" required aria-required="true" />
+          <span class="errorMsg" id="emailError" aria-live="polite"></span>
+        </label>
+
+        <label class="formLabel">
+          Phone number
+          <input type="tel" name="phone" id="phone" class="inputField" placeholder="+27 82 000 0000" />
+          <span class="errorMsg" id="phoneError" aria-live="polite"></span>
+        </label>
+      </div>
+
+      <fieldset class="fieldGroup" aria-labelledby="interestLegend">
+        <legend id="interestLegend" class="fieldLegend">Field of interest</legend>
+
+        <label class="radioLabel">
+          <input type="radio" name="interest" value="Animation" checked /> Animation
+        </label>
+        <label class="radioLabel">
+          <input type="radio" name="interest" value="Photography" /> Photography
+        </label>
+        <label class="radioLabel">
+          <input type="radio" name="interest" value="Film & TV" /> Film & Tv
+        </label>
+        <label class="radioLabel">
+          <input type="radio" name="interest" value="Visual Arts" /> Visual Arts
+        </label>
+        <label class="radioLabel">
+          <input type="radio" name="interest" value="Other" /> Other
+        </label>
+      </fieldset>
+
+      <label class="formLabel fullWidth">
+        Reason for reaching out
+        <input type="text" name="reason" id="reason" class="inputField" />
+        <span class="errorMsg" id="reasonError" aria-live="polite"></span>
+      </label>
+
+      <label class="formLabel fullWidth">
+        Yap Box (Optional message)
+        <textarea name="message" id="message" class="inputField textArea" rows="4" placeholder="Tell us more..."></textarea>
+        <span class="errorMsg" id="messageError" aria-live="polite"></span>
+      </label>
+
+      <div class="formActions">
+        <button type="submit" id="submitBtn" class="submitBtn" disabled>Send message</button>
+        <span id="formStatus" class="formStatus" aria-live="polite"></span>
+      </div>
+    </form>
+  </div>
+</section>
 
 
 
-    <script src="../JS/main.js"></script> 
-        <script src="../JS/about.js"></script> 
+          <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+          <script>
+          emailjs.init('Cz_3B6WELkuUO2Ytv');
+          </script>
+
+        
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Draggable.min.js"></script>
@@ -89,6 +169,8 @@
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
 
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/CustomEase.min.js"></script>
-    
+     <script src="../JS/contact.js"></script>  
+       <script src="../JS/main.js"></script> 
+
 </body>
 </html>
