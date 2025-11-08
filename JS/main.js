@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const hamburger = document.querySelector('.hamburgerMenu');
   const navLinks = document.querySelector('.navLinks');
 
+  
   console.log('Hamburger found:', hamburger); 
   console.log('NavLinks found:', navLinks); 
   
