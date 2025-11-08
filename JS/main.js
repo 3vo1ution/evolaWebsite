@@ -69,19 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Loading Screen
-window.addEventListener('load', function() {
-  const loadingScreen = document.getElementById('loadingScreen');
   
-  setTimeout(() => {
-    loadingScreen.classList.add('fadeOut');
-    
-    setTimeout(() => {
-      loadingScreen.remove();
-    }, 500);
-  }, 1500);
-});
 
 });
 
- 
